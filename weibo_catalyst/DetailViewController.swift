@@ -12,19 +12,61 @@ class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        setupMacToolbar()
     }
-    */
+    
+    func setupMacToolbar() {
+        #if targetEnvironment(macCatalyst)
+        guard let windowSceen = view.window?.windowScene else { return }
+        let toolbar = NSToolbar(identifier: "DetailToolbar")
+        toolbar.delegate = self
+        windowSceen.titlebar?.toolbar = toolbar
+        #endif
+    }
+}
+
+#if targetEnvironment(macCatalyst)
+extension DetailViewController: NSToolbarDelegate {
+    func toolbarDefaultItemIdentifiers(_ toolbar: NSToolbar) -> [NSToolbarItem.Identifier] {
+        return [.goback, .flexibleSpace, .new]
+    }
+    
+    func toolbarAllowedItemIdentifiers(_ toolbar: NSToolbar) -> [NSToolbarItem.Identifier] {
+        return [.goback, .flexibleSpace, .new]
+    }
+    
+    func toolbar(_ toolbar: NSToolbar, itemForItemIdentifier itemIdentifier: NSToolbarItem.Identifier, willBeInsertedIntoToolbar flag: Bool) -> NSToolbarItem? {
+        let toolbarItem = NSToolbarItem(itemIdentifier: itemIdentifier)
+        toolbarItem.isBordered = true
+        toolbarItem.target = self
+        toolbarItem.action = #selector(toolbarItemClicked(_:))
+        if itemIdentifier == .goback {
+            toolbarItem.tag = 1
+            toolbarItem.image = UIImage(systemName: "chevron.left")
+        } else if itemIdentifier == .new {
+            toolbarItem.image = UIImage(systemName: "pencil.and.outline")
+            toolbarItem.tag = 2
+        }
+        return toolbarItem
+    }
+    
+    @objc private func toolbarItemClicked(_ sender: NSToolbarItem) {
+        if sender.tag == 1 {
+            navigationController?.popViewController(animated: true)
+        } else if sender.tag == 2 {
+            
+        }
+    }
 
 }
+
+private extension NSToolbarItem.Identifier {
+    static let goback = NSToolbarItem.Identifier("goback")
+    static let new = NSToolbarItem.Identifier("new")
+}
+#endif
