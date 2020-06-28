@@ -1,5 +1,5 @@
 //
-//  DetailViewController.swift
+//  SplitViewController.swift
 //  weibo_catalyst
 //
 //  Created by huluobo on 2020/6/28.
@@ -7,13 +7,10 @@
 //
 
 import UIKit
+import SwiftUI
 
-class DetailViewController: UIViewController {
+class SplitViewController: UISplitViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
@@ -31,7 +28,7 @@ class DetailViewController: UIViewController {
 }
 
 #if targetEnvironment(macCatalyst)
-extension DetailViewController: NSToolbarDelegate {
+extension SplitViewController: NSToolbarDelegate {
     func toolbarDefaultItemIdentifiers(_ toolbar: NSToolbar) -> [NSToolbarItem.Identifier] {
         return [.goback, .flexibleSpace, .new]
     }
@@ -57,9 +54,12 @@ extension DetailViewController: NSToolbarDelegate {
     
     @objc private func toolbarItemClicked(_ sender: NSToolbarItem) {
         if sender.tag == 1 {
-            navigationController?.popViewController(animated: true)
+            if let nav = viewControllers.last as? UINavigationController {
+                nav.popViewController(animated: true)
+            }
         } else if sender.tag == 2 {
-            
+            let vc = UIHostingController(rootView: PostView())
+            present(vc, animated: true, completion: nil)
         }
     }
 

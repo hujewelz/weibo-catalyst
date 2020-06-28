@@ -14,7 +14,13 @@
 		C27360F124A8410400830F82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C27360F024A8410400830F82 /* Assets.xcassets */; };
 		C27360F424A8410400830F82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C27360F224A8410400830F82 /* LaunchScreen.storyboard */; };
 		C27360FF24A8410400830F82 /* weibo_catalystTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27360FE24A8410400830F82 /* weibo_catalystTests.swift */; };
-		C273610B24A841E900830F82 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C273610A24A841E900830F82 /* DetailViewController.swift */; };
+		C273610D24A86E8100830F82 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C273610C24A86E8100830F82 /* SplitViewController.swift */; };
+		C273610F24A8705000830F82 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C273610E24A8705000830F82 /* Router.swift */; };
+		C273611124A879DC00830F82 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C273611024A879DC00830F82 /* ContentView.swift */; };
+		C273611324A8933B00830F82 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C273611224A8933B00830F82 /* HomeView.swift */; };
+		C273611724A8938300830F82 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = C273611624A8938300830F82 /* Timeline.swift */; };
+		C273611924A8953400830F82 /* TimelineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C273611824A8953400830F82 /* TimelineCell.swift */; };
+		C273611B24A89C3600830F82 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C273611A24A89C3600830F82 /* PostView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +46,13 @@
 		C27360FE24A8410400830F82 /* weibo_catalystTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weibo_catalystTests.swift; sourceTree = "<group>"; };
 		C273610024A8410400830F82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C273610924A8410A00830F82 /* weibo_catalyst.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = weibo_catalyst.entitlements; sourceTree = "<group>"; };
-		C273610A24A841E900830F82 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		C273610C24A86E8100830F82 /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
+		C273610E24A8705000830F82 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		C273611024A879DC00830F82 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C273611224A8933B00830F82 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C273611624A8938300830F82 /* Timeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
+		C273611824A8953400830F82 /* TimelineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineCell.swift; sourceTree = "<group>"; };
+		C273611A24A89C3600830F82 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,11 +98,14 @@
 				C27360E724A8410300830F82 /* AppDelegate.swift */,
 				C27360E924A8410300830F82 /* SceneDelegate.swift */,
 				C27360EB24A8410300830F82 /* MasterViewController.swift */,
-				C273610A24A841E900830F82 /* DetailViewController.swift */,
 				C27360ED24A8410300830F82 /* Main.storyboard */,
 				C27360F024A8410400830F82 /* Assets.xcassets */,
 				C27360F224A8410400830F82 /* LaunchScreen.storyboard */,
 				C27360F524A8410400830F82 /* Info.plist */,
+				C273610C24A86E8100830F82 /* SplitViewController.swift */,
+				C273610E24A8705000830F82 /* Router.swift */,
+				C273611024A879DC00830F82 /* ContentView.swift */,
+				C273611424A8934500830F82 /* Home */,
 			);
 			path = weibo_catalyst;
 			sourceTree = "<group>";
@@ -102,6 +117,25 @@
 				C273610024A8410400830F82 /* Info.plist */,
 			);
 			path = weibo_catalystTests;
+			sourceTree = "<group>";
+		};
+		C273611424A8934500830F82 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C273611524A8935B00830F82 /* View */,
+				C273611624A8938300830F82 /* Timeline.swift */,
+				C273611824A8953400830F82 /* TimelineCell.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C273611524A8935B00830F82 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C273611224A8933B00830F82 /* HomeView.swift */,
+				C273611A24A89C3600830F82 /* PostView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,10 +239,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C273611724A8938300830F82 /* Timeline.swift in Sources */,
+				C273610D24A86E8100830F82 /* SplitViewController.swift in Sources */,
+				C273611324A8933B00830F82 /* HomeView.swift in Sources */,
 				C27360EC24A8410300830F82 /* MasterViewController.swift in Sources */,
+				C273611124A879DC00830F82 /* ContentView.swift in Sources */,
 				C27360E824A8410300830F82 /* AppDelegate.swift in Sources */,
+				C273611924A8953400830F82 /* TimelineCell.swift in Sources */,
 				C27360EA24A8410300830F82 /* SceneDelegate.swift in Sources */,
-				C273610B24A841E900830F82 /* DetailViewController.swift in Sources */,
+				C273611B24A89C3600830F82 /* PostView.swift in Sources */,
+				C273610F24A8705000830F82 /* Router.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

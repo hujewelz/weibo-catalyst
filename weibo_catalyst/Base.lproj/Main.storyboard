@@ -21,7 +21,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DMr-0v-mwU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="984.05797101449286" y="10.714285714285714"/>
+            <point key="canvasLocation" x="2558" y="25"/>
+        </scene>
+        <!--Hosting Controller-->
+        <scene sceneID="ajb-AA-he7">
+            <objects>
+                <hostingController id="cDe-DY-LaY" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="pr5-mf-G4F"/>
+                </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VKD-tB-CaP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="922" y="11"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="0T3-dP-fFM">
@@ -71,7 +81,7 @@
         <!--Split View Controller-->
         <scene sceneID="9Jd-ca-poi">
             <objects>
-                <splitViewController id="0IQ-hW-24k" sceneMemberID="viewController">
+                <splitViewController id="0IQ-hW-24k" customClass="SplitViewController" customModule="weibo_catalyst" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
                         <segue destination="Hd0-0Q-yl8" kind="relationship" relationship="masterViewController" id="UVj-6Y-pJG"/>
                         <segue destination="NSZ-On-vpS" kind="relationship" relationship="detailViewController" id="V1h-OF-tWW"/>
@@ -92,7 +102,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="8Ha-RG-TKJ" kind="relationship" relationship="rootViewController" id="shR-uv-WzY"/>
+                        <segue destination="cDe-DY-LaY" kind="relationship" relationship="rootViewController" id="7Cf-c6-Y7N"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4vd-yV-ZRQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

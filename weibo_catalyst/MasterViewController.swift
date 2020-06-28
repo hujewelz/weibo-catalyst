@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class MasterViewController: UITableViewController {
     
@@ -17,6 +18,7 @@ class MasterViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -27,6 +29,7 @@ class MasterViewController: UITableViewController {
         let menu = menus[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.imageView?.image = UIImage(systemName: menu.icon)
+        cell.imageView?.tintColor = .white
         cell.textLabel?.text = menu.title
         return cell
     }
