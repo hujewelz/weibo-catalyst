@@ -41,7 +41,7 @@ struct PostView: View {
                 Button(action: {
                     self.isPresented = true
                 }) {
-                    Image(systemName: "paperclip.circle.fill")
+                    Image(systemName: "photo.fill")
                     Text("图片")
                 }.sheet(isPresented: $isPresented) {
                     ImagePicker { image in
@@ -71,7 +71,9 @@ struct PostView: View {
                 }.padding(.top, 15)
             }
             Spacer()
-        }.padding(30)
+        }
+        .padding(30)
+        .foregroundColor(Color("text1"))
     }
 }
 

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,6 +22,12 @@
 		C273611924A8953400830F82 /* TimelineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C273611824A8953400830F82 /* TimelineCell.swift */; };
 		C273611B24A89C3600830F82 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C273611A24A89C3600830F82 /* PostView.swift */; };
 		C273611D24A8AC2C00830F82 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C273611C24A8AC2C00830F82 /* ImagePicker.swift */; };
+		C273611F24A9923400830F82 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C273611E24A9923400830F82 /* API.swift */; };
+		C273612224A9956E00830F82 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = C273612124A9956E00830F82 /* Account.swift */; };
+		C273612524A99AFD00830F82 /* Json in Frameworks */ = {isa = PBXBuildFile; productRef = C273612424A99AFD00830F82 /* Json */; };
+		C273612724A99AFD00830F82 /* Request in Frameworks */ = {isa = PBXBuildFile; productRef = C273612624A99AFD00830F82 /* Request */; };
+		C273612924A99E3C00830F82 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C273612824A99E3C00830F82 /* AuthorizationViewController.swift */; };
+		C273612B24A99EDD00830F82 /* WeiboConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C273612A24A99EDD00830F82 /* WeiboConstant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +61,10 @@
 		C273611824A8953400830F82 /* TimelineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineCell.swift; sourceTree = "<group>"; };
 		C273611A24A89C3600830F82 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		C273611C24A8AC2C00830F82 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		C273611E24A9923400830F82 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		C273612124A9956E00830F82 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		C273612824A99E3C00830F82 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
+		C273612A24A99EDD00830F82 /* WeiboConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeiboConstant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +72,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C273612724A99AFD00830F82 /* Request in Frameworks */,
+				C273612524A99AFD00830F82 /* Json in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,10 +116,13 @@
 				C27360F024A8410400830F82 /* Assets.xcassets */,
 				C27360F224A8410400830F82 /* LaunchScreen.storyboard */,
 				C27360F524A8410400830F82 /* Info.plist */,
+				C273612A24A99EDD00830F82 /* WeiboConstant.swift */,
 				C273610C24A86E8100830F82 /* SplitViewController.swift */,
+				C273612824A99E3C00830F82 /* AuthorizationViewController.swift */,
 				C273610E24A8705000830F82 /* Router.swift */,
 				C273611024A879DC00830F82 /* ContentView.swift */,
 				C273611424A8934500830F82 /* Home */,
+				C273612024A9923A00830F82 /* Networking */,
 			);
 			path = weibo_catalyst;
 			sourceTree = "<group>";
@@ -141,6 +156,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		C273612024A9923A00830F82 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				C273611E24A9923400830F82 /* API.swift */,
+				C273612124A9956E00830F82 /* Account.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -157,6 +181,10 @@
 			dependencies = (
 			);
 			name = weibo_catalyst;
+			packageProductDependencies = (
+				C273612424A99AFD00830F82 /* Json */,
+				C273612624A99AFD00830F82 /* Request */,
+			);
 			productName = weibo_catalyst;
 			productReference = C27360E424A8410300830F82 /* weibo_catalyst.app */;
 			productType = "com.apple.product-type.application";
@@ -207,6 +235,9 @@
 				Base,
 			);
 			mainGroup = C27360DB24A8410300830F82;
+			packageReferences = (
+				C273612324A99AFD00830F82 /* XCRemoteSwiftPackageReference "swift-request" */,
+			);
 			productRefGroup = C27360E524A8410300830F82 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -242,7 +273,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C273612924A99E3C00830F82 /* AuthorizationViewController.swift in Sources */,
 				C273611724A8938300830F82 /* Timeline.swift in Sources */,
+				C273612B24A99EDD00830F82 /* WeiboConstant.swift in Sources */,
+				C273612224A9956E00830F82 /* Account.swift in Sources */,
 				C273610D24A86E8100830F82 /* SplitViewController.swift in Sources */,
 				C273611324A8933B00830F82 /* HomeView.swift in Sources */,
 				C27360EC24A8410300830F82 /* MasterViewController.swift in Sources */,
@@ -252,6 +286,7 @@
 				C273611D24A8AC2C00830F82 /* ImagePicker.swift in Sources */,
 				C27360EA24A8410300830F82 /* SceneDelegate.swift in Sources */,
 				C273611B24A89C3600830F82 /* PostView.swift in Sources */,
+				C273611F24A9923400830F82 /* API.swift in Sources */,
 				C273610F24A8705000830F82 /* Router.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -523,6 +558,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C273612324A99AFD00830F82 /* XCRemoteSwiftPackageReference "swift-request" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/carson-katri/swift-request";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C273612424A99AFD00830F82 /* Json */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C273612324A99AFD00830F82 /* XCRemoteSwiftPackageReference "swift-request" */;
+			productName = Json;
+		};
+		C273612624A99AFD00830F82 /* Request */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C273612324A99AFD00830F82 /* XCRemoteSwiftPackageReference "swift-request" */;
+			productName = Request;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C27360DC24A8410300830F82 /* Project object */;
 }

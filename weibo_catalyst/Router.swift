@@ -10,18 +10,25 @@ import UIKit
 import SwiftUI
 
 class Router {
-    let splitViewController: SplitViewController
+    private var window: UIWindow!
     
     static let shared = Router()
     
-    init() {
-        splitViewController = SplitViewController()
+    func start(_ window: UIWindow) {
+        self.window = window
+       
+        if AccessTokenManager.shared.token == nil {
+            window.rootViewController = AuthorizationViewController()
+        } else {
+            switchToMain()
+        }
     }
     
-    func start(_ window: UIWindow) {
+    func switchToMain() {
         #if targetEnvironment(macCatalyst)
         let rightNavVC = UINavigationController(rootViewController: UIHostingController(rootView: ContentView()))
         rightNavVC.navigationBar.isHidden = true
+        let splitViewController = SplitViewController()
         splitViewController.viewControllers = [MasterViewController(), rightNavVC]
         splitViewController.primaryBackgroundStyle = .sidebar
         splitViewController.maximumPrimaryColumnWidth = 180
