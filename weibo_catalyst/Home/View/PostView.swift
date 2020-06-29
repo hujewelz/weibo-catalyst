@@ -10,6 +10,9 @@ import SwiftUI
 
 struct PostView: View {
     @State var text = ""
+    @State var isPresented = false
+    @State var images: [UIImage] = []
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 15) {
             HStack {
@@ -36,10 +39,14 @@ struct PostView: View {
             HStack(spacing: 16) {
                 Spacer()
                 Button(action: {
-                    
+                    self.isPresented = true
                 }) {
                     Image(systemName: "paperclip.circle.fill")
                     Text("图片")
+                }.sheet(isPresented: $isPresented) {
+                    ImagePicker { image in
+                        self.images.append(image)
+                    }
                 }
                 
                 Button(action: {
@@ -51,6 +58,17 @@ struct PostView: View {
                 .foregroundColor(Color.white)
                 .background(Color.orange)
                 .clipShape(RoundedRectangle(cornerRadius: 6))
+            }
+            
+            // images
+            if !images.isEmpty {
+                HStack {
+                    ForEach(0..<images.count, id: \.self) { idx in
+                        Image(uiImage: self.images[idx])
+                            .resizable()
+                            .frame(width: 80, height: 80)
+                    }
+                }.padding(.top, 15)
             }
             Spacer()
         }.padding(30)
