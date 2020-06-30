@@ -31,3 +31,18 @@ struct Disk {
     }
 }
 
+extension Disk {
+    static var appDocumentUrl: URL? {
+       guard let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last else {
+           return nil
+       }
+       return url.appendingPathComponent("jewelz.weiboclient", isDirectory: true)
+    }
+    
+    static var appCacheUrl: URL? {
+       guard let url = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).last else {
+           return nil
+       }
+       return url.appendingPathComponent("jewelz.weiboclient", isDirectory: true)
+    }
+}

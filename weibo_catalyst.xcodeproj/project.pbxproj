@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C244D23824AB5A5100BFA156 /* UserInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C244D23724AB5A5100BFA156 /* UserInfoManager.swift */; };
 		C27360E824A8410300830F82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27360E724A8410300830F82 /* AppDelegate.swift */; };
 		C27360EA24A8410300830F82 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27360E924A8410300830F82 /* SceneDelegate.swift */; };
 		C27360EC24A8410300830F82 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27360EB24A8410300830F82 /* MasterViewController.swift */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C244D23724AB5A5100BFA156 /* UserInfoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoManager.swift; sourceTree = "<group>"; };
 		C27360E424A8410300830F82 /* weibo_catalyst.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weibo_catalyst.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C27360E724A8410300830F82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C27360E924A8410300830F82 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 			children = (
 				C273612124A9956E00830F82 /* Account.swift */,
 				C2FC8ECC24AB5716004813A4 /* Disk.swift */,
+				C244D23724AB5A5100BFA156 /* UserInfoManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				C2FC8E9724AAE80F004813A4 /* LinkLabel.swift in Sources */,
 				C273611D24A8AC2C00830F82 /* ImagePicker.swift in Sources */,
 				C27360EA24A8410300830F82 /* SceneDelegate.swift in Sources */,
+				C244D23824AB5A5100BFA156 /* UserInfoManager.swift in Sources */,
 				C273611B24A89C3600830F82 /* PostView.swift in Sources */,
 				C2FC8EC624AB1AD5004813A4 /* TimelineToolbar.swift in Sources */,
 				C273611F24A9923400830F82 /* API.swift in Sources */,
