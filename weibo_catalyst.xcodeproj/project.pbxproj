@@ -33,6 +33,7 @@
 		C2FC8E9724AAE80F004813A4 /* LinkLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FC8E9624AAE80F004813A4 /* LinkLabel.swift */; };
 		C2FC8EBB24AB0D26004813A4 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = C2FC8EBA24AB0D26004813A4 /* SDWebImageSwiftUI */; };
 		C2FC8EC224AB12A8004813A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2FC8EC124AB12A8004813A4 /* Main.storyboard */; };
+		C2FC8EC424AB14A9004813A4 /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FC8EC324AB14A9004813A4 /* LoadingIndicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		C2FC8E7324AAD42A004813A4 /* HttpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
 		C2FC8E9624AAE80F004813A4 /* LinkLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkLabel.swift; sourceTree = "<group>"; };
 		C2FC8EC124AB12A8004813A4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C2FC8EC324AB14A9004813A4 /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				C273611C24A8AC2C00830F82 /* ImagePicker.swift */,
+				C2FC8EC324AB14A9004813A4 /* LoadingIndicator.swift */,
 			);
 			path = Representable;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				C273611124A879DC00830F82 /* ContentView.swift in Sources */,
 				C27360E824A8410300830F82 /* AppDelegate.swift in Sources */,
 				C273611924A8953400830F82 /* TimelineCell.swift in Sources */,
+				C2FC8EC424AB14A9004813A4 /* LoadingIndicator.swift in Sources */,
 				C2FC8E9724AAE80F004813A4 /* LinkLabel.swift in Sources */,
 				C273611D24A8AC2C00830F82 /* ImagePicker.swift in Sources */,
 				C27360EA24A8410300830F82 /* SceneDelegate.swift in Sources */,

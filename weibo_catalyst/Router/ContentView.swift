@@ -20,19 +20,7 @@ struct ContentView: View {
 
 struct MacContentView: View {
     var body: some View {
-        HomeView(/*request: .init(target: API.homeTimeLine)*/)
-    }
-}
-
-struct DetailView: View {
-    var body: some View {
-        VStack {
-            Text("Detail")
-            NavigationLink(destination: Text("1").navigationBarHidden(true)) {
-                Text("PUSH")
-            }
-        }
-        .navigationBarHidden(true)
+        HomeView()
     }
 }
 

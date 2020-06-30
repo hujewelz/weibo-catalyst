@@ -15,13 +15,13 @@ struct HomeView: View {
     var body: some View {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
-        return List {
-            RequestView(Request(target: API.homeTimeLine)) { data in
+        return RequestView(Request(target: API.homeTimeLine)) { data in
+            List {
                 ForEach(data != nil ? try! decoder.decode(WeiboResult<[TimeLine]>.self, from: data!).value : []) { timeline in
                     TimelineCell(timeline: timeline)
                 }
-                Text("Loading..")
             }
+            LoadingIndicator()
         }
     }
 }
