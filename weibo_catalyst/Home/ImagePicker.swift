@@ -9,30 +9,35 @@
 import SwiftUI
 
 class ImagePickerDelegate: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    var didFinishedPickongImage: ((UIImage) -> Void)?
+    var didFinishedPickingImage: ((UIImage) -> Void)?
+    
+    init(didFinishedPickingImage: ((UIImage) -> Void)?) {
+        self.didFinishedPickingImage = didFinishedPickingImage
+    }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true, completion: nil)
         guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
-        didFinishedPickongImage?(image)
+        didFinishedPickingImage?(image)
     }
 }
 
 struct ImagePicker: UIViewControllerRepresentable {
-    var didFinishedPickongImage: ((UIImage) -> Void)?
-    let delegate = ImagePickerDelegate()
+    var didFinishedPickingImage: ((UIImage) -> Void)?
     
     func makeUIViewController(context: Context) -> UIImagePickerController {
         let picker = UIImagePickerController()
         picker.sourceType = .photoLibrary
-        picker.delegate = delegate
-        delegate.didFinishedPickongImage = { image in
-            self.didFinishedPickongImage?(image)
-        }
+        picker.delegate = context.coordinator
         return picker
     }
     
     func updateUIViewController(_ uiViewController: UIImagePickerController, context: Context) {
         
+    }
+    
+    func makeCoordinator() -> ImagePickerDelegate {
+        return ImagePickerDelegate(didFinishedPickingImage: didFinishedPickingImage)
     }
 }
 

@@ -28,6 +28,11 @@
 		C273612724A99AFD00830F82 /* Request in Frameworks */ = {isa = PBXBuildFile; productRef = C273612624A99AFD00830F82 /* Request */; };
 		C273612924A99E3C00830F82 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C273612824A99E3C00830F82 /* AuthorizationViewController.swift */; };
 		C273612B24A99EDD00830F82 /* WeiboConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C273612A24A99EDD00830F82 /* WeiboConstant.swift */; };
+		C2FC8E7024A9D472004813A4 /* RequestTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FC8E6F24A9D472004813A4 /* RequestTarget.swift */; };
+		C2FC8E7224A9D8B3004813A4 /* WeiboResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FC8E7124A9D8B3004813A4 /* WeiboResult.swift */; };
+		C2FC8E7424AAD42A004813A4 /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FC8E7324AAD42A004813A4 /* HttpRequest.swift */; };
+		C2FC8E9724AAE80F004813A4 /* LinkLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FC8E9624AAE80F004813A4 /* LinkLabel.swift */; };
+		C2FC8EBB24AB0D26004813A4 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = C2FC8EBA24AB0D26004813A4 /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +70,10 @@
 		C273612124A9956E00830F82 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		C273612824A99E3C00830F82 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		C273612A24A99EDD00830F82 /* WeiboConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeiboConstant.swift; sourceTree = "<group>"; };
+		C2FC8E6F24A9D472004813A4 /* RequestTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTarget.swift; sourceTree = "<group>"; };
+		C2FC8E7124A9D8B3004813A4 /* WeiboResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeiboResult.swift; sourceTree = "<group>"; };
+		C2FC8E7324AAD42A004813A4 /* HttpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
+		C2FC8E9624AAE80F004813A4 /* LinkLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2FC8EBB24AB0D26004813A4 /* SDWebImageSwiftUI in Frameworks */,
 				C273612724A99AFD00830F82 /* Request in Frameworks */,
 				C273612524A99AFD00830F82 /* Json in Frameworks */,
 			);
@@ -116,7 +126,6 @@
 				C27360F024A8410400830F82 /* Assets.xcassets */,
 				C27360F224A8410400830F82 /* LaunchScreen.storyboard */,
 				C27360F524A8410400830F82 /* Info.plist */,
-				C273612A24A99EDD00830F82 /* WeiboConstant.swift */,
 				C273610C24A86E8100830F82 /* SplitViewController.swift */,
 				C273612824A99E3C00830F82 /* AuthorizationViewController.swift */,
 				C273610E24A8705000830F82 /* Router.swift */,
@@ -143,6 +152,7 @@
 				C273611624A8938300830F82 /* Timeline.swift */,
 				C273611824A8953400830F82 /* TimelineCell.swift */,
 				C273611C24A8AC2C00830F82 /* ImagePicker.swift */,
+				C2FC8E9624AAE80F004813A4 /* LinkLabel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -159,8 +169,12 @@
 		C273612024A9923A00830F82 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				C273612A24A99EDD00830F82 /* WeiboConstant.swift */,
 				C273611E24A9923400830F82 /* API.swift */,
 				C273612124A9956E00830F82 /* Account.swift */,
+				C2FC8E6F24A9D472004813A4 /* RequestTarget.swift */,
+				C2FC8E7124A9D8B3004813A4 /* WeiboResult.swift */,
+				C2FC8E7324AAD42A004813A4 /* HttpRequest.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -184,6 +198,7 @@
 			packageProductDependencies = (
 				C273612424A99AFD00830F82 /* Json */,
 				C273612624A99AFD00830F82 /* Request */,
+				C2FC8EBA24AB0D26004813A4 /* SDWebImageSwiftUI */,
 			);
 			productName = weibo_catalyst;
 			productReference = C27360E424A8410300830F82 /* weibo_catalyst.app */;
@@ -237,6 +252,7 @@
 			mainGroup = C27360DB24A8410300830F82;
 			packageReferences = (
 				C273612324A99AFD00830F82 /* XCRemoteSwiftPackageReference "swift-request" */,
+				C2FC8EB924AB0D26004813A4 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = C27360E524A8410300830F82 /* Products */;
 			projectDirPath = "";
@@ -278,15 +294,19 @@
 				C273612B24A99EDD00830F82 /* WeiboConstant.swift in Sources */,
 				C273612224A9956E00830F82 /* Account.swift in Sources */,
 				C273610D24A86E8100830F82 /* SplitViewController.swift in Sources */,
+				C2FC8E7424AAD42A004813A4 /* HttpRequest.swift in Sources */,
 				C273611324A8933B00830F82 /* HomeView.swift in Sources */,
+				C2FC8E7224A9D8B3004813A4 /* WeiboResult.swift in Sources */,
 				C27360EC24A8410300830F82 /* MasterViewController.swift in Sources */,
 				C273611124A879DC00830F82 /* ContentView.swift in Sources */,
 				C27360E824A8410300830F82 /* AppDelegate.swift in Sources */,
 				C273611924A8953400830F82 /* TimelineCell.swift in Sources */,
+				C2FC8E9724AAE80F004813A4 /* LinkLabel.swift in Sources */,
 				C273611D24A8AC2C00830F82 /* ImagePicker.swift in Sources */,
 				C27360EA24A8410300830F82 /* SceneDelegate.swift in Sources */,
 				C273611B24A89C3600830F82 /* PostView.swift in Sources */,
 				C273611F24A9923400830F82 /* API.swift in Sources */,
+				C2FC8E7024A9D472004813A4 /* RequestTarget.swift in Sources */,
 				C273610F24A8705000830F82 /* Router.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -568,6 +588,14 @@
 				minimumVersion = 1.2.2;
 			};
 		};
+		C2FC8EB924AB0D26004813A4 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -580,6 +608,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C273612324A99AFD00830F82 /* XCRemoteSwiftPackageReference "swift-request" */;
 			productName = Request;
+		};
+		C2FC8EBA24AB0D26004813A4 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C2FC8EB924AB0D26004813A4 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

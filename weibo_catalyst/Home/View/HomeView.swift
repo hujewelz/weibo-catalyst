@@ -7,12 +7,20 @@
 //
 
 import SwiftUI
+import Request
+import Json
 
 struct HomeView: View {
+    
     var body: some View {
-        List {
-            ForEach(testData) { data in
-                TimelineCell(timeline: data)
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        return List {
+            RequestView(Request(target: API.homeTimeLine)) { data in
+                ForEach(data != nil ? try! decoder.decode(WeiboResult<[TimeLine]>.self, from: data!).value : []) { timeline in
+                    TimelineCell(timeline: timeline)
+                }
+                Text("Loading..")
             }
         }
     }

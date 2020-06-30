@@ -20,7 +20,7 @@ struct ContentView: View {
 
 struct MacContentView: View {
     var body: some View {
-        HomeView()
+        HomeView(/*request: .init(target: API.homeTimeLine)*/)
     }
 }
 

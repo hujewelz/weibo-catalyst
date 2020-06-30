@@ -45,7 +45,6 @@ final class AccessTokenManager {
         if !FileManager.default.fileExists(atPath: dataUrl.absoluteString) {
             try FileManager.default.createDirectory(at: rootUrl, withIntermediateDirectories: true)
         }
-        print("Data path: ", dataUrl)
         try data.write(to: dataUrl, options: [Data.WritingOptions.atomic])
     }
 }
@@ -60,7 +59,6 @@ struct AccessToken: Codable {
         accessToken = try container.decode(String.self, forKey: .accessToken)
         expiresIn = try container.decode(Double.self, forKey: .expiresIn)
         expiresAt = Date().timeIntervalSince1970 + expiresIn
-        print("expiresAt: ", expiresAt)
     }
     
     var isExpiresed: Bool {

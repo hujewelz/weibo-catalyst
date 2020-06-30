@@ -7,29 +7,37 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct TimelineCell: View {
     let timeline: TimeLine
     
     var body: some View {
         HStack(alignment: .top, spacing: 8) {
-            Image(timeline.user.avatar)
+            WebImage(url: URL(string: timeline.user.avatarLarge))
                 .resizable()
                 .frame(width: 60, height: 60)
-                .background(Color.pink)
+                .background(Color.gray)
                 .clipShape(Circle())
                 
             VStack(alignment: .leading, spacing: 8) {
                 Text(timeline.user.name)
-                    .font(.title)
+                    .font(.system(size: 17))
+                    .bold()
                 HStack {
                     Text(timeline.createdAt)
-                    .font(.footnote)
+                    .font(.system(size: 14))
                     .foregroundColor(Color.gray)
                     
-                    Text("来自 \(timeline.source)")
-                        .font(.footnote)
+                    Text("来自 \(timeline.weiboSource.source)")
+                        .font(.system(size: 14))
                         .foregroundColor(Color.gray)
+                        .onTapGesture {
+                            guard let url = URL(string: self.timeline.weiboSource.link) else { return }
+                            if UIApplication.shared.canOpenURL(url) {
+                                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                            }
+                    }
                 }
                 Spacer()
                 Text(timeline.text)
@@ -40,6 +48,8 @@ struct TimelineCell: View {
 
 struct TimelineCell_Previews: PreviewProvider {
     static var previews: some View {
-        TimelineCell(timeline: testData[0])
+        TimelineCell(timeline:
+            TimeLine(id: 0, createdAt: "", text: "", source: "", user:
+                User(id: 1, name: "", avatarLarge: "", location: "", description: "")))
     }
 }
