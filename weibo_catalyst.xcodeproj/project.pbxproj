@@ -10,7 +10,6 @@
 		C27360E824A8410300830F82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27360E724A8410300830F82 /* AppDelegate.swift */; };
 		C27360EA24A8410300830F82 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27360E924A8410300830F82 /* SceneDelegate.swift */; };
 		C27360EC24A8410300830F82 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27360EB24A8410300830F82 /* MasterViewController.swift */; };
-		C27360EF24A8410300830F82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C27360ED24A8410300830F82 /* Main.storyboard */; };
 		C27360F124A8410400830F82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C27360F024A8410400830F82 /* Assets.xcassets */; };
 		C27360F424A8410400830F82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C27360F224A8410400830F82 /* LaunchScreen.storyboard */; };
 		C27360FF24A8410400830F82 /* weibo_catalystTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27360FE24A8410400830F82 /* weibo_catalystTests.swift */; };
@@ -33,6 +32,7 @@
 		C2FC8E7424AAD42A004813A4 /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FC8E7324AAD42A004813A4 /* HttpRequest.swift */; };
 		C2FC8E9724AAE80F004813A4 /* LinkLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FC8E9624AAE80F004813A4 /* LinkLabel.swift */; };
 		C2FC8EBB24AB0D26004813A4 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = C2FC8EBA24AB0D26004813A4 /* SDWebImageSwiftUI */; };
+		C2FC8EC224AB12A8004813A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2FC8EC124AB12A8004813A4 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +50,6 @@
 		C27360E724A8410300830F82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C27360E924A8410300830F82 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C27360EB24A8410300830F82 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		C27360EE24A8410300830F82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C27360F024A8410400830F82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C27360F324A8410400830F82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C27360F524A8410400830F82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -74,6 +73,7 @@
 		C2FC8E7124A9D8B3004813A4 /* WeiboResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeiboResult.swift; sourceTree = "<group>"; };
 		C2FC8E7324AAD42A004813A4 /* HttpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
 		C2FC8E9624AAE80F004813A4 /* LinkLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkLabel.swift; sourceTree = "<group>"; };
+		C2FC8EC124AB12A8004813A4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,20 +118,14 @@
 		C27360E624A8410300830F82 /* weibo_catalyst */ = {
 			isa = PBXGroup;
 			children = (
-				C273610924A8410A00830F82 /* weibo_catalyst.entitlements */,
 				C27360E724A8410300830F82 /* AppDelegate.swift */,
 				C27360E924A8410300830F82 /* SceneDelegate.swift */,
-				C27360EB24A8410300830F82 /* MasterViewController.swift */,
-				C27360ED24A8410300830F82 /* Main.storyboard */,
-				C27360F024A8410400830F82 /* Assets.xcassets */,
-				C27360F224A8410400830F82 /* LaunchScreen.storyboard */,
-				C27360F524A8410400830F82 /* Info.plist */,
-				C273610C24A86E8100830F82 /* SplitViewController.swift */,
-				C273612824A99E3C00830F82 /* AuthorizationViewController.swift */,
-				C273610E24A8705000830F82 /* Router.swift */,
-				C273611024A879DC00830F82 /* ContentView.swift */,
+				C2FC8EC024AB1255004813A4 /* Router */,
+				C2FC8EBE24AB116C004813A4 /* ViewController */,
+				C2FC8EBC24AB1137004813A4 /* Representable */,
 				C273611424A8934500830F82 /* Home */,
 				C273612024A9923A00830F82 /* Networking */,
+				C2FC8EBF24AB11CC004813A4 /* Resources */,
 			);
 			path = weibo_catalyst;
 			sourceTree = "<group>";
@@ -149,10 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				C273611524A8935B00830F82 /* View */,
-				C273611624A8938300830F82 /* Timeline.swift */,
-				C273611824A8953400830F82 /* TimelineCell.swift */,
-				C273611C24A8AC2C00830F82 /* ImagePicker.swift */,
-				C2FC8E9624AAE80F004813A4 /* LinkLabel.swift */,
+				C2FC8EBD24AB114A004813A4 /* Model */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -160,6 +151,8 @@
 		C273611524A8935B00830F82 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C2FC8E9624AAE80F004813A4 /* LinkLabel.swift */,
+				C273611824A8953400830F82 /* TimelineCell.swift */,
 				C273611224A8933B00830F82 /* HomeView.swift */,
 				C273611A24A89C3600830F82 /* PostView.swift */,
 			);
@@ -177,6 +170,53 @@
 				C2FC8E7324AAD42A004813A4 /* HttpRequest.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		C2FC8EBC24AB1137004813A4 /* Representable */ = {
+			isa = PBXGroup;
+			children = (
+				C273611C24A8AC2C00830F82 /* ImagePicker.swift */,
+			);
+			path = Representable;
+			sourceTree = "<group>";
+		};
+		C2FC8EBD24AB114A004813A4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C273611624A8938300830F82 /* Timeline.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C2FC8EBE24AB116C004813A4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C27360EB24A8410300830F82 /* MasterViewController.swift */,
+				C273610C24A86E8100830F82 /* SplitViewController.swift */,
+				C273612824A99E3C00830F82 /* AuthorizationViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		C2FC8EBF24AB11CC004813A4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C2FC8EC124AB12A8004813A4 /* Main.storyboard */,
+				C273610924A8410A00830F82 /* weibo_catalyst.entitlements */,
+				C27360F024A8410400830F82 /* Assets.xcassets */,
+				C27360F224A8410400830F82 /* LaunchScreen.storyboard */,
+				C27360F524A8410400830F82 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C2FC8EC024AB1255004813A4 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				C273610E24A8705000830F82 /* Router.swift */,
+				C273611024A879DC00830F82 /* ContentView.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,9 +309,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2FC8EC224AB12A8004813A4 /* Main.storyboard in Resources */,
 				C27360F424A8410400830F82 /* LaunchScreen.storyboard in Resources */,
 				C27360F124A8410400830F82 /* Assets.xcassets in Resources */,
-				C27360EF24A8410300830F82 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,14 +370,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C27360ED24A8410300830F82 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C27360EE24A8410300830F82 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C27360F224A8410400830F82 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -467,10 +499,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = weibo_catalyst/weibo_catalyst.entitlements;
+				CODE_SIGN_ENTITLEMENTS = weibo_catalyst/Resources/weibo_catalyst.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UA8U3Z7XU4;
-				INFOPLIST_FILE = weibo_catalyst/Info.plist;
+				INFOPLIST_FILE = weibo_catalyst/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -487,10 +519,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = weibo_catalyst/weibo_catalyst.entitlements;
+				CODE_SIGN_ENTITLEMENTS = weibo_catalyst/Resources/weibo_catalyst.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UA8U3Z7XU4;
-				INFOPLIST_FILE = weibo_catalyst/Info.plist;
+				INFOPLIST_FILE = weibo_catalyst/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
