@@ -13,6 +13,14 @@ struct TimeLine: Codable, Identifiable {
     let createdAt: String
     let text: String
     let source: String
+    var favorited: Bool = false
+    var repostsCount = 0
+    var commentsCount = 0
+    var attitudesCount = 0
+    var thumbnailPic: String?
+    var bmiddlePic: String?
+    var originalPic: String?
+    var picUrls: [Picture]?
     let user: User
     
     var weiboSource: WeiboSource {
@@ -20,12 +28,8 @@ struct TimeLine: Codable, Identifiable {
     }
 }
 
-struct User: Codable {
-    let id: Int
-    let name: String
-    let avatarLarge: String
-    let location: String
-    let description: String
+struct Picture: Codable {
+    var thumbnailPic: String?
 }
 
 struct WeiboSource {

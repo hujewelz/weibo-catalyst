@@ -18,9 +18,8 @@ final class AccessTokenManager {
         if _token != nil {
             return _token!.isExpiresed ? nil : _token
         }
-        guard let dataUrl = dataRootUrl?.appendingPathComponent("/accesstoken.data")
-            , let data = try? Data(contentsOf: dataUrl),
-            let token = try? JSONDecoder().decode(AccessToken.self, from: data) else { return nil }
+        guard let dataUrl = dataRootUrl?.appendingPathComponent("accesstoken.data")
+            , let token: AccessToken = try? Disk.value(from: dataUrl) else { return nil }
         if token.isExpiresed { return nil }
         _token = token
         return token
@@ -32,7 +31,7 @@ final class AccessTokenManager {
         guard let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last else {
             return nil
         }
-        return url.appendingPathComponent("jewelz.weiboclient")
+        return url.appendingPathComponent("jewelz.weiboclient", isDirectory: true)
     }
     
     
@@ -42,10 +41,7 @@ final class AccessTokenManager {
             throw SaveFileError.pathDoesNotExists
         }
         let dataUrl = rootUrl.appendingPathComponent("accesstoken.data")
-        if !FileManager.default.fileExists(atPath: dataUrl.absoluteString) {
-            try FileManager.default.createDirectory(at: rootUrl, withIntermediateDirectories: true)
-        }
-        try data.write(to: dataUrl, options: [Data.WritingOptions.atomic])
+        try Disk.save(data, at: dataUrl)
     }
 }
 

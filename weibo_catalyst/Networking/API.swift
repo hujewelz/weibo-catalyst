@@ -12,21 +12,23 @@ import Request
 enum API {
     case homeTimeLine
     case userTimeLine
+    case userInfo
 }
 
 extension API: RequestTarget {
     var baseURL: String {
-        return "https://api.weibo.com/2"
+        return "https://api.weibo.com"
     }
     
     var path: String {
         switch self {
         case .homeTimeLine:
-            return "/statuses/home_timeline.json"
+            return "/2/statuses/home_timeline.json"
         case .userTimeLine:
-            return "/statuses/user_timeline.json"
+            return "/2/statuses/user_timeline.json"
+        case .userInfo:
+            return "/2/users/show.json"
         }
-        
     }
     
     var parameters: [String : String]? {

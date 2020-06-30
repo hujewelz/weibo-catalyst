@@ -34,6 +34,10 @@
 		C2FC8EBB24AB0D26004813A4 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = C2FC8EBA24AB0D26004813A4 /* SDWebImageSwiftUI */; };
 		C2FC8EC224AB12A8004813A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2FC8EC124AB12A8004813A4 /* Main.storyboard */; };
 		C2FC8EC424AB14A9004813A4 /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FC8EC324AB14A9004813A4 /* LoadingIndicator.swift */; };
+		C2FC8EC624AB1AD5004813A4 /* TimelineToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FC8EC524AB1AD5004813A4 /* TimelineToolbar.swift */; };
+		C2FC8EC924AB3662004813A4 /* ImageGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FC8EC824AB3662004813A4 /* ImageGroup.swift */; };
+		C2FC8ECB24AB50FE004813A4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FC8ECA24AB50FE004813A4 /* User.swift */; };
+		C2FC8ECD24AB5716004813A4 /* Disk.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FC8ECC24AB5716004813A4 /* Disk.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +80,10 @@
 		C2FC8E9624AAE80F004813A4 /* LinkLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkLabel.swift; sourceTree = "<group>"; };
 		C2FC8EC124AB12A8004813A4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C2FC8EC324AB14A9004813A4 /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
+		C2FC8EC524AB1AD5004813A4 /* TimelineToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineToolbar.swift; sourceTree = "<group>"; };
+		C2FC8EC824AB3662004813A4 /* ImageGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGroup.swift; sourceTree = "<group>"; };
+		C2FC8ECA24AB50FE004813A4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C2FC8ECC24AB5716004813A4 /* Disk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Disk.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,8 +134,10 @@
 				C2FC8EBE24AB116C004813A4 /* ViewController */,
 				C2FC8EBC24AB1137004813A4 /* Representable */,
 				C273611424A8934500830F82 /* Home */,
+				C2FC8EC724AB1ADB004813A4 /* Component */,
 				C273612024A9923A00830F82 /* Networking */,
 				C2FC8EBF24AB11CC004813A4 /* Resources */,
+				C2FC8ECE24AB5788004813A4 /* Model */,
 			);
 			path = weibo_catalyst;
 			sourceTree = "<group>";
@@ -166,7 +176,6 @@
 			children = (
 				C273612A24A99EDD00830F82 /* WeiboConstant.swift */,
 				C273611E24A9923400830F82 /* API.swift */,
-				C273612124A9956E00830F82 /* Account.swift */,
 				C2FC8E6F24A9D472004813A4 /* RequestTarget.swift */,
 				C2FC8E7124A9D8B3004813A4 /* WeiboResult.swift */,
 				C2FC8E7324AAD42A004813A4 /* HttpRequest.swift */,
@@ -187,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				C273611624A8938300830F82 /* Timeline.swift */,
+				C2FC8ECA24AB50FE004813A4 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -220,6 +230,24 @@
 				C273611024A879DC00830F82 /* ContentView.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		C2FC8EC724AB1ADB004813A4 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				C2FC8EC524AB1AD5004813A4 /* TimelineToolbar.swift */,
+				C2FC8EC824AB3662004813A4 /* ImageGroup.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		C2FC8ECE24AB5788004813A4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C273612124A9956E00830F82 /* Account.swift */,
+				C2FC8ECC24AB5716004813A4 /* Disk.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,13 +373,17 @@
 				C27360E824A8410300830F82 /* AppDelegate.swift in Sources */,
 				C273611924A8953400830F82 /* TimelineCell.swift in Sources */,
 				C2FC8EC424AB14A9004813A4 /* LoadingIndicator.swift in Sources */,
+				C2FC8ECD24AB5716004813A4 /* Disk.swift in Sources */,
 				C2FC8E9724AAE80F004813A4 /* LinkLabel.swift in Sources */,
 				C273611D24A8AC2C00830F82 /* ImagePicker.swift in Sources */,
 				C27360EA24A8410300830F82 /* SceneDelegate.swift in Sources */,
 				C273611B24A89C3600830F82 /* PostView.swift in Sources */,
+				C2FC8EC624AB1AD5004813A4 /* TimelineToolbar.swift in Sources */,
 				C273611F24A9923400830F82 /* API.swift in Sources */,
 				C2FC8E7024A9D472004813A4 /* RequestTarget.swift in Sources */,
 				C273610F24A8705000830F82 /* Router.swift in Sources */,
+				C2FC8EC924AB3662004813A4 /* ImageGroup.swift in Sources */,
+				C2FC8ECB24AB50FE004813A4 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

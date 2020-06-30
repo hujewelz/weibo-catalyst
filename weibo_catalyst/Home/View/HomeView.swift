@@ -17,12 +17,28 @@ struct HomeView: View {
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         return RequestView(Request(target: API.homeTimeLine)) { data in
             List {
-                ForEach(data != nil ? try! decoder.decode(WeiboResult<[TimeLine]>.self, from: data!).value : []) { timeline in
+                ForEach((data != nil ? try? decoder.decode(WeiboResult<[TimeLine]>.self, from: data!).value : []) ?? []) {
+                    timeline in
                     TimelineCell(timeline: timeline)
                 }
             }
+            
             LoadingIndicator()
-        }
+        }/*.onAppear {
+            UITableView.appearance().separatorStyle = .none
+        }.onDisappear {
+            UITableView.appearance().separatorStyle = .singleLine
+        }*/
+    }
+    
+    func test() {
+        Request(target: API.homeTimeLine).onJson { json in
+            print(json)
+        }.onError{ error in
+            if let data = error.error {
+                print("ERROR: ", try! Json(data))
+            }
+        }.call()
     }
 }
 
