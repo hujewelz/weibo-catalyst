@@ -18,7 +18,7 @@ final class AccessTokenManager {
         if _token != nil {
             return _token!.isExpiresed ? nil : _token
         }
-        guard let dataUrl = dataRootUrl?.appendingPathComponent("accesstoken.data")
+        guard let dataUrl = Disk.appDocumentUrl?.appendingPathComponent("accesstoken.data")
             , let token: AccessToken = try? Disk.value(from: dataUrl) else { return nil }
         if token.isExpiresed { return nil }
         _token = token
@@ -27,17 +27,9 @@ final class AccessTokenManager {
     
     private var _token: AccessToken?
     
-    private var dataRootUrl: URL? {
-        guard let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last else {
-            return nil
-        }
-        return url.appendingPathComponent("jewelz.weiboclient", isDirectory: true)
-    }
-    
-    
     func save(_ token: AccessToken) throws {
         let data = try JSONEncoder().encode(token)
-        guard let rootUrl = dataRootUrl else {
+        guard let rootUrl = Disk.appDocumentUrl else {
             throw SaveFileError.pathDoesNotExists
         }
         let dataUrl = rootUrl.appendingPathComponent("accesstoken.data")
