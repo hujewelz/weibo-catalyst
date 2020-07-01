@@ -9,12 +9,6 @@
 import SwiftUI
 import SDWebImageSwiftUI
 
-struct ImageGroup: View {
-    var body: some View {
-        Text("Hello, World!")
-    }
-}
-
 struct WebImageGroup: View {
     let urls: [String]
     var column: Int = 3
@@ -25,17 +19,35 @@ struct WebImageGroup: View {
     }
     
     var body: some View {
-        return VStack(alignment: .leading, spacing: 8) {
-            ForEach(0..<numberOfRows) { row  in
-                return HStack {
-                    ForEach(0..<self.maxIndex(ofRow: row)) { column in
-//                         Text("\(row * self.column + column)")
-                        WebImage(url: self.url(at: column, inRow: row))
+        buildContent()
+    }
+    
+    private func buildContent() -> some View {
+        Group {
+            if urls.count <= column + 1 {
+                HStack {
+                    ForEach(urls, id: \.self) { url in
+                        WebImage(url: URL(string: url))
                             .resizable()
                             .scaledToFill()
                             .background(Color.gray)
-                            .frame(width: 120, height: 120)
+                            .frame(width: 160, height: 160)
                             .clipped()
+                    }
+                }
+            } else {
+                VStack(alignment: .leading, spacing: 8) {
+                    ForEach(0..<numberOfRows) { row  in
+                        HStack {
+                            ForEach(0..<self.maxIndex(ofRow: row)) { column in
+                                WebImage(url: self.url(at: column, inRow: row))
+                                    .resizable()
+                                    .scaledToFill()
+                                    .background(Color.gray)
+                                    .frame(width: 120, height: 120)
+                                    .clipped()
+                            }
+                        }
                     }
                 }
             }
@@ -55,6 +67,6 @@ struct WebImageGroup: View {
 
 struct ImageGroup_Previews: PreviewProvider {
     static var previews: some View {
-        ImageGroup()
+        WebImageGroup(urls: [])
     }
 }

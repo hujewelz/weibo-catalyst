@@ -14,6 +14,8 @@ import Json
 final class UserInfoManager {
     static let shared = UserInfoManager()
     
+    private init() {}
+    
     var user: User? {
         if let cached = _cached { return cached }
         guard let url = dataUrl else { return nil }
