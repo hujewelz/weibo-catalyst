@@ -63,6 +63,7 @@ struct TimelineToolbar: View {
         }
         .frame(height: 40)
         .foregroundColor(Color.gray)
+        .buttonStyle(PlainButtonStyle())
 //        .background(Color.pink)
     }
 }
