@@ -28,6 +28,7 @@
 		C273612724A99AFD00830F82 /* Request in Frameworks */ = {isa = PBXBuildFile; productRef = C273612624A99AFD00830F82 /* Request */; };
 		C273612924A99E3C00830F82 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C273612824A99E3C00830F82 /* AuthorizationViewController.swift */; };
 		C273612B24A99EDD00830F82 /* WeiboConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C273612A24A99EDD00830F82 /* WeiboConstant.swift */; };
+		C2DFA8CB24AC75EA001FB066 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DFA8CA24AC75EA001FB066 /* ImageUploader.swift */; };
 		C2FC8E7024A9D472004813A4 /* RequestTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FC8E6F24A9D472004813A4 /* RequestTarget.swift */; };
 		C2FC8E7224A9D8B3004813A4 /* WeiboResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FC8E7124A9D8B3004813A4 /* WeiboResult.swift */; };
 		C2FC8E7424AAD42A004813A4 /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FC8E7324AAD42A004813A4 /* HttpRequest.swift */; };
@@ -76,6 +77,7 @@
 		C273612124A9956E00830F82 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		C273612824A99E3C00830F82 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		C273612A24A99EDD00830F82 /* WeiboConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeiboConstant.swift; sourceTree = "<group>"; };
+		C2DFA8CA24AC75EA001FB066 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		C2FC8E6F24A9D472004813A4 /* RequestTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTarget.swift; sourceTree = "<group>"; };
 		C2FC8E7124A9D8B3004813A4 /* WeiboResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeiboResult.swift; sourceTree = "<group>"; };
 		C2FC8E7324AAD42A004813A4 /* HttpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 				C273612124A9956E00830F82 /* Account.swift */,
 				C2FC8ECC24AB5716004813A4 /* Disk.swift */,
 				C244D23724AB5A5100BFA156 /* UserInfoManager.swift */,
+				C2DFA8CA24AC75EA001FB066 /* ImageUploader.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				C273612B24A99EDD00830F82 /* WeiboConstant.swift in Sources */,
 				C273612224A9956E00830F82 /* Account.swift in Sources */,
 				C273610D24A86E8100830F82 /* SplitViewController.swift in Sources */,
+				C2DFA8CB24AC75EA001FB066 /* ImageUploader.swift in Sources */,
 				C2FC8E7424AAD42A004813A4 /* HttpRequest.swift in Sources */,
 				C273611324A8933B00830F82 /* HomeView.swift in Sources */,
 				C2FC8E7224A9D8B3004813A4 /* WeiboResult.swift in Sources */,
