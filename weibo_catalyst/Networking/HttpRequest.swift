@@ -43,3 +43,20 @@ class HttpRequest<Value>: ObservableObject where Value: Decodable {
     }
 }
 
+enum NetworkError: Error {
+    case dataFormateError
+}
+
+extension JSONDecoder {
+    func decode<T>(_ type: T.Type, from data: Data, forKey key: String) throws -> T where T : Decodable {
+        guard let json = try? JSONSerialization.jsonObject(with: data, options: [])
+            , let dict = json as? [String: Any]
+            , let value = dict[key] else {
+                throw NetworkError.dataFormateError
+        }
+        guard let valueData = try? JSONSerialization.data(withJSONObject: value, options: []) else {
+            throw NetworkError.dataFormateError
+        }
+        return try decode(type, from: valueData)
+    }
+}

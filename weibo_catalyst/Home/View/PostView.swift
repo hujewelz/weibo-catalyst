@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import Request
 
 struct PostView: View {
     @State var text = ""
@@ -50,7 +51,7 @@ struct PostView: View {
                 }
                 
                 Button(action: {
-                    
+                    self.post()
                 }) {
                     Text("发送")
                 }
@@ -72,31 +73,25 @@ struct PostView: View {
             }
             Spacer()
         }
+        .buttonStyle(PlainButtonStyle())
         .padding(30)
         .foregroundColor(Color("text1"))
+    }
+    
+    private func post() {
+        print("Text: ", text)
+        let params = [
+            "access_token": AccessTokenManager.shared.token?.accessToken ?? "",
+            "status": text
+        ]
+        ImageUploader.upload(images: images,
+                             params: params,
+                             url: "https://api.weibo.com/2/statuses/share.json")
     }
 }
 
 struct PostView_Previews: PreviewProvider {
     static var previews: some View {
         PostView()
-    }
-}
-
-struct TextView: UIViewRepresentable {
-    @Binding var text: String
-    var onEditingChanged: ((Bool) -> Void)?
-    var onCommit: ((Bool) -> Void)?
-    
-    func makeUIView(context: Context) -> UITextView {
-        let  textView = UITextView()
-        textView.text = text
-        textView.font = UIFont.systemFont(ofSize: 14)
-        textView.isScrollEnabled = false
-        return textView
-    }
-    
-    func updateUIView(_ uiView: UITextView, context: Context) {
-        
     }
 }
