@@ -29,6 +29,8 @@
 		C273612924A99E3C00830F82 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C273612824A99E3C00830F82 /* AuthorizationViewController.swift */; };
 		C273612B24A99EDD00830F82 /* WeiboConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C273612A24A99EDD00830F82 /* WeiboConstant.swift */; };
 		C2DFA8CB24AC75EA001FB066 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DFA8CA24AC75EA001FB066 /* ImageUploader.swift */; };
+		C2DFA8CF24ADC05C001FB066 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DFA8CE24ADC05C001FB066 /* Comment.swift */; };
+		C2DFA8D124ADC11C001FB066 /* TimelineDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DFA8D024ADC11C001FB066 /* TimelineDetail.swift */; };
 		C2FC8E7024A9D472004813A4 /* RequestTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FC8E6F24A9D472004813A4 /* RequestTarget.swift */; };
 		C2FC8E7224A9D8B3004813A4 /* WeiboResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FC8E7124A9D8B3004813A4 /* WeiboResult.swift */; };
 		C2FC8E7424AAD42A004813A4 /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FC8E7324AAD42A004813A4 /* HttpRequest.swift */; };
@@ -78,6 +80,8 @@
 		C273612824A99E3C00830F82 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		C273612A24A99EDD00830F82 /* WeiboConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeiboConstant.swift; sourceTree = "<group>"; };
 		C2DFA8CA24AC75EA001FB066 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
+		C2DFA8CE24ADC05C001FB066 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		C2DFA8D024ADC11C001FB066 /* TimelineDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineDetail.swift; sourceTree = "<group>"; };
 		C2FC8E6F24A9D472004813A4 /* RequestTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTarget.swift; sourceTree = "<group>"; };
 		C2FC8E7124A9D8B3004813A4 /* WeiboResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeiboResult.swift; sourceTree = "<group>"; };
 		C2FC8E7324AAD42A004813A4 /* HttpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
@@ -171,6 +175,7 @@
 				C273611824A8953400830F82 /* TimelineCell.swift */,
 				C273611224A8933B00830F82 /* HomeView.swift */,
 				C273611A24A89C3600830F82 /* PostView.swift */,
+				C2DFA8D024ADC11C001FB066 /* TimelineDetail.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -201,6 +206,7 @@
 			children = (
 				C273611624A8938300830F82 /* Timeline.swift */,
 				C2FC8ECA24AB50FE004813A4 /* User.swift */,
+				C2DFA8CE24ADC05C001FB066 /* Comment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -369,9 +375,11 @@
 				C273612924A99E3C00830F82 /* AuthorizationViewController.swift in Sources */,
 				C273611724A8938300830F82 /* Timeline.swift in Sources */,
 				C273612B24A99EDD00830F82 /* WeiboConstant.swift in Sources */,
+				C2DFA8CF24ADC05C001FB066 /* Comment.swift in Sources */,
 				C273612224A9956E00830F82 /* Account.swift in Sources */,
 				C273610D24A86E8100830F82 /* SplitViewController.swift in Sources */,
 				C2DFA8CB24AC75EA001FB066 /* ImageUploader.swift in Sources */,
+				C2DFA8D124ADC11C001FB066 /* TimelineDetail.swift in Sources */,
 				C2FC8E7424AAD42A004813A4 /* HttpRequest.swift in Sources */,
 				C273611324A8933B00830F82 /* HomeView.swift in Sources */,
 				C2FC8E7224A9D8B3004813A4 /* WeiboResult.swift in Sources */,

@@ -40,7 +40,6 @@ struct TimelineCell: View {
                                 }
                         }
                     }
-                    Spacer()
                     Text(timeline.text)
                     if timeline.picUrls != nil {
                         WebImageGroup(urls: timeline.picUrls!.map { $0.thumbnailPic ?? ""}.filter { !$0.isEmpty })
@@ -53,8 +52,9 @@ struct TimelineCell: View {
                             repostsCount: timeline.repostsCount,
                             commentsCount: timeline.commentsCount,
                             attitudesCount: timeline.attitudesCount)
+            // Separator
+            Divider()
         }
-//        .background(Color.black.opacity(0.5))
     }
 }
 

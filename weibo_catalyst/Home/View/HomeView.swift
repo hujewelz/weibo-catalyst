@@ -17,18 +17,22 @@ struct HomeView: View {
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         return RequestView(Request(target: API.homeTimeLine)) { data in
             List {
-                ForEach((data != nil ? try? decoder.decode(WeiboResult<[TimeLine]>.self, from: data!).value : []) ?? []) {
+                ForEach((data != nil ? try? decoder.decode([TimeLine].self, from: data!, forKey: "statuses") : []) ?? []) {
                     timeline in
-                    TimelineCell(timeline: timeline)
+                    ZStack { // to hide navigationLink disclosure indicator
+                        NavigationLink(destination: TimelineDetail(timeline: timeline)) {
+                            EmptyView()
+                        }
+                        .hidden()
+                        TimelineCell(timeline: timeline)
+                    }
                 }
             }
             
             LoadingIndicator()
-        }/*.onAppear {
+        }.onAppear {
             UITableView.appearance().separatorStyle = .none
-        }.onDisappear {
-            UITableView.appearance().separatorStyle = .singleLine
-        }*/
+        }
     }
     
     func test() {
