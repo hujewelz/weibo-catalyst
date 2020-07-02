@@ -29,6 +29,7 @@
 		C273612924A99E3C00830F82 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C273612824A99E3C00830F82 /* AuthorizationViewController.swift */; };
 		C273612B24A99EDD00830F82 /* WeiboConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C273612A24A99EDD00830F82 /* WeiboConstant.swift */; };
 		C2DFA8CB24AC75EA001FB066 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DFA8CA24AC75EA001FB066 /* ImageUploader.swift */; };
+		C2DFA8CD24AC9A42001FB066 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DFA8CC24AC9A42001FB066 /* TextView.swift */; };
 		C2DFA8CF24ADC05C001FB066 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DFA8CE24ADC05C001FB066 /* Comment.swift */; };
 		C2DFA8D124ADC11C001FB066 /* TimelineDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DFA8D024ADC11C001FB066 /* TimelineDetail.swift */; };
 		C2FC8E7024A9D472004813A4 /* RequestTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FC8E6F24A9D472004813A4 /* RequestTarget.swift */; };
@@ -80,6 +81,7 @@
 		C273612824A99E3C00830F82 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		C273612A24A99EDD00830F82 /* WeiboConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeiboConstant.swift; sourceTree = "<group>"; };
 		C2DFA8CA24AC75EA001FB066 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
+		C2DFA8CC24AC9A42001FB066 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		C2DFA8CE24ADC05C001FB066 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		C2DFA8D024ADC11C001FB066 /* TimelineDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineDetail.swift; sourceTree = "<group>"; };
 		C2FC8E6F24A9D472004813A4 /* RequestTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTarget.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 			children = (
 				C273611C24A8AC2C00830F82 /* ImagePicker.swift */,
 				C2FC8EC324AB14A9004813A4 /* LoadingIndicator.swift */,
+				C2DFA8CC24AC9A42001FB066 /* TextView.swift */,
 			);
 			path = Representable;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				C273611F24A9923400830F82 /* API.swift in Sources */,
 				C2FC8E7024A9D472004813A4 /* RequestTarget.swift in Sources */,
 				C273610F24A8705000830F82 /* Router.swift in Sources */,
+				C2DFA8CD24AC9A42001FB066 /* TextView.swift in Sources */,
 				C2FC8EC924AB3662004813A4 /* ImageGroup.swift in Sources */,
 				C2FC8ECB24AB50FE004813A4 /* User.swift in Sources */,
 			);
