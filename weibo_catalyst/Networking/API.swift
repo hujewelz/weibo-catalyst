@@ -13,6 +13,7 @@ enum API {
     case homeTimeLine
     case userTimeLine
     case userInfo
+    case comments(id: Int)
 }
 
 extension API: RequestTarget {
@@ -28,10 +29,20 @@ extension API: RequestTarget {
             return "/2/statuses/user_timeline.json"
         case .userInfo:
             return "/2/users/show.json"
+        case .comments:
+            return "/2/comments/show.json"
         }
     }
     
     var parameters: [String : String]? {
-        return ["access_token": AccessTokenManager.shared.token?.accessToken ?? ""]
+        switch self{
+        case .comments(id: let id):
+            return [
+                "access_token": AccessTokenManager.shared.token?.accessToken ?? "",
+                "id": "\(id)"
+            ]
+        default:
+            return ["access_token": AccessTokenManager.shared.token?.accessToken ?? ""]
+        }
     }
 }
