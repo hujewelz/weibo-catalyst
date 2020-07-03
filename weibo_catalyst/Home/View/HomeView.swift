@@ -31,7 +31,7 @@ struct HomeView: View {
             
             LoadingIndicator()
         }.onAppear {
-            UITableView.appearance().separatorStyle = .none
+            UITableView.appearance().tableFooterView = UIView()
         }
     }
     

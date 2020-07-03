@@ -58,7 +58,7 @@ struct CommentCell: View {
         }
         .padding(15)
         .onAppear {
-            UITableView.appearance().separatorStyle = .none
+            UITableView.appearance().tableFooterView = UIView()
         }
     }
 }

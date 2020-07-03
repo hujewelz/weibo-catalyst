@@ -53,7 +53,7 @@ struct TimelineCell: View {
                             commentsCount: timeline.commentsCount,
                             attitudesCount: timeline.attitudesCount)
             // Separator
-            Divider()
+//            Divider()
         }
     }
 }
